@@ -1,1 +1,11 @@
-
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var singleNumber = function(nums) {
+    let sortedNum = []
+    for (let num of nums) {
+        (!sortedNum.includes(num)) ? sortedNum.push(num) : sortedNum.splice(sortedNum.indexOf(num), 1)
+    }
+    return sortedNum
+};
